@@ -100,7 +100,8 @@ transition: 0.4s ease-in-out transform;
     justify-self: center;
 }
 #score{
-    font-size: 45px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
     grid-area: content1;
     justify-self: center;
 }
@@ -111,6 +112,8 @@ transition: 0.4s ease-in-out transform;
     justify-self: center;
     border-radius: 13%;
     display: none;
+    transform: scale(0.7, 0.7);
+    transition: 2s;
 }
 #dice {
     grid-area: content2;
