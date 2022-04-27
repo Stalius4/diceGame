@@ -9,7 +9,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     max-width: 100%;
-    height: 100vh;
 }
 
 button{
@@ -72,7 +71,7 @@ img{
     ". . . ";
   grid-gap: 1rem;
   transform:
-  translate(110%, 0%)
+  translate(50%, 0%)
   perspective(800px)
   translate3d(50px, 50px, 30px)
   rotateX(30deg)
@@ -84,7 +83,7 @@ transition: 0.4s ease-in-out transform;
 }
 .container:hover{
     transform: translate3d(0px, 0px, -250px)
-    translate(110%, 20%);
+    translate(50%, 20%);
 }
 .title{
     
