@@ -1,22 +1,17 @@
 const cube = document.querySelector(".cube")
+
+let scoreDisplay =document.querySelector(".score")
+let scoreDisplay2 =document.getElementById("score")
+let diceFace1 =document.getElementById("dice-img")
+
+
+const restartBtn = document.querySelector("#start-again-btn")
 const rollBtn =document.querySelector("#roll-btn")
 
-let diceFace1 =document.getElementById("dice-img")
-const diceImgs = document.querySelectorAll(".dice-roll-img")
-let index = 0;
 
-let content2 = document.querySelector(".wrap")
-let displayDice= document.getElementById("display-dice")
 
 let score = 0
-// const face1 = document.getElementById("dice-img")
-// const face2 = document.getElementById("dice-img2")
-// const face3 = document.getElementById("dice-img3")
-// const face4 = document.getElementById("dice-img4")
-// const face5 = document.getElementById("dice-img5")
-// const face6 = document.getElementById("dice-img6")
 
-// const array = [face1, face2,face3,face4,face5,face6,]
 rollBtn.addEventListener("click", () => {
   cube.style.display = "none";
   diceFace1.style.display = "grid";
@@ -34,7 +29,7 @@ rollBtn.addEventListener("click", () => {
 
   function randomImg() {
     let random = Math.floor(Math.random() * 6);
-    // displayDice = array[random]
+
     diceFace1.src = images[random];
     cnt++;
 
@@ -42,23 +37,58 @@ rollBtn.addEventListener("click", () => {
       clearInterval(obj);
       console.log(images[random]);
       if (images[random] == "dice1.png") {
-        console.log(score);
+          
+          scoreDisplay2.textContent= "You lost"
+        
+        diceFace1.style.display = "grid";
+        scoreDisplay.style.display = "none";
+        rollBtn.style.display = "none"
+        
+       
+        setTimeout(function() {
+            diceFace1.style.display = "none"
+            cube.style.display = "grid";
+            restartBtn.style.display="grid"}, 4000)
+
+
+
       } else if (images[random] == "dice2.png") {
           score = score +2 
-        console.log(score);
+          scoreDisplay.textContent= score
+          win()
       } else if (images[random] == "dice3.png") {
         score = score +3 
-        console.log(score);
+        scoreDisplay.textContent= score
+        win()
       } else if (images[random] == "dice4.png") {
         score = score +4 
-        console.log(score);
+        scoreDisplay.textContent= score
+        win()
       }else if (images[random] == "dice5.png") {
         score = score +5 
-        console.log(score);
+        scoreDisplay.textContent= score
+        win()
       }else if (images[random] == "dice6.png") {
         score = score +6 
-        console.log(score);
+        scoreDisplay.textContent= score
+        win()
       }
     }
   }
 });
+
+restartBtn.addEventListener("click", () => {
+    window.location.reload()
+})
+
+
+function win(){
+    if(score>=20){
+        scoreDisplay2.textContent= "Winner!"
+        
+            diceFace1.style.display = "none"
+            cube.style.display = "grid";
+            restartBtn.style.display="grid"
+            rollBtn.style.display = "none"
+    }
+}

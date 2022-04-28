@@ -60,7 +60,7 @@ button:hover{
     background-color: #10508f65;
     
   grid-template-columns: 0.5fr 1fr  0.5fr ;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 300px 0.7fr 0.3fr 1fr;
+  grid-template-rows: 50.84px 50.84px 50.84px 300px 71.22px 71.22px 1fr;
   grid-template-areas:
     ". . . "
     ". main . "
@@ -74,7 +74,7 @@ margin: auto;
   transform:
   /* translate(-10%, 0%) */
   perspective(800px)
-  translate3d(50px, -50px, 30px)
+  translate3d(50px, 0px, 30px)
   rotateX(30deg)
   scale(0.6, 0.6);
 border-radius: 20px;
@@ -104,6 +104,15 @@ transition: 0.4s ease-in-out transform;
     font-size: 25px;
     grid-area: content1;
     justify-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.score{
+    
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
 }
 #dice-img, #dice-img2, #dice-img3, #dice-img4, #dice-img5, #dice-img6{
     background-color: #5dceff90;
@@ -123,6 +132,7 @@ transition: 0.4s ease-in-out transform;
     grid-area: content3;
 }
 #start-again-btn{
+    height: 70px;
     grid-area:content4;
     display: none;
     
