@@ -128,7 +128,9 @@ transition: 0.4s ease-in-out transform;
     
 }
 
-
+#display-dice{
+    grid-area: content2;
+}
 
  /* -------------------------blue moving border------------------------------------------------ */
 .container span{
@@ -206,7 +208,7 @@ transition: 0.4s ease-in-out transform;
     display: flex;
     width: 100%;
     
-     
+  
   /*   margin-top: 150px; */
     perspective: 1000px;
     perspective-origin: 50% 50%;
