@@ -72,7 +72,7 @@ button:hover{
   grid-gap: 2rem;
 margin: auto;
   transform:
-  /* translate(60%, 0%) */
+  /* translate(-10%, 0%) */
   perspective(800px)
   translate3d(50px, -50px, 30px)
   rotateX(30deg)
@@ -85,7 +85,7 @@ transition: 0.4s ease-in-out transform;
 }
 .container:hover{
     transform: translate3d(0px, 0px, -250px)
-    translate(0%, 0%)
+    translate(10%, 0%)
     scale(0.8, 0.8);
 
     
@@ -130,7 +130,7 @@ transition: 0.4s ease-in-out transform;
 
 
 
-
+ /* -------------------------blue moving border------------------------------------------------ */
 .container span{
     z-index: -1;
     position: absolute;
@@ -199,17 +199,7 @@ transition: 0.4s ease-in-out transform;
   
   
 } 
-/* @media only screen and (max-width: 1024px){
-    body{
-    max-width: 100%;
-    max-height: auto;
-}
-.container{
-    position: absolute;
-    margin: auto;
-}
-} */
-
+/* moving dice--------------------------------- */
 .wrap {
 
     grid-area: content2;
